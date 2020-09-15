@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+    <div class="contact-block">
+        <p>Контактные данные</p>
+        <img src="{{ url_for('static', filename = 'pics/pulse.png') }}" class="pulse" alt="">
+        <br>
+        <img src="{{ url_for('static', filename = 'pics/contacts-pic.png') }}" alt="" class="contact-picture">
+        <div class="contact-list">
+            <div class="contact-list-block">
+                <img src="{{ url_for('static', filename = 'pics/contacts-where.png') }}" alt="" class="contact-icon">
+                <div class="contact-divider"></div>
+                <div class="contact-data">
+                    <p>Украина, 69035</p>
+                    <p>г. Запорожье, пр. Соборный, 1</p>
+                </div>
+            </div>
+            <div class="contact-list-block">
+                <img src="{{ url_for('static', filename = 'pics/contacts-call.png') }}" alt="" class="contact-icon">
+                <div class="contact-divider"></div>
+                <div class="contact-data">
+                    <p>066 666-66-66</p>
+                    <p>077 777-77-77</p>
+                </div>
+            </div>
+            <div class="contact-list-block">
+                <img src="{{ url_for('static', filename = 'pics/contacts-calendar.png') }}" alt="" class="contact-icon">
+                <div class="contact-divider"></div>
+                <div class="contact-data">
+                    <p>Будние дни 8:00-20:00</p>
+                    <p>Выходные дни 9:00-18:00</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="contact-text">
+        Мы расположены в самом центре города Запорожья в здании стационара Областного медицинского центра сердечно-сосудистых заболеваний, напротив 5-й городской больницы скорой медицинской помощи.
+        Вы можете приехать к нам на машине, рядом есть удобное место для парковки, или добраться на автобусе и маршрутном такси, остановка "ЛСУ" или "5-я городская больница".
+    </div>
+    <div class="contact-text">
+        Вы можете записаться на приём по телефону или на сайте в удобное для вас время. Мы обязательно перезвоним вам, чтобы уточнить детали и подтвердить запись. Если у вас есть вопросы, наши сотрудники с удовольствием ответят на них.
+    </div>
+    <div class="contact-text">
+        <b>Мы всегда вам рады!</b>
+    </div>
+    <div class="contact-map"></div>
+
+    <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16285.498997065193!2d35.033070384185216!3d47.83263435873538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dc617330c0e4cd%3A0x37be405758507ca9!2z0JLQvtGA0L7QvdC10LbRgdC60LDRjyDRg9C7LiwgMjIsINCX0LDQv9C-0YDQvtC20YzQtSwg0JfQsNC_0L7RgNC-0LbRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjkwMDA!5e0!3m2!1sru!2sua!4v1596044670577!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>
+{% include '_footer.html' %}
+{% endblock %}

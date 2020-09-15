@@ -1,0 +1,86 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <script src="{{ url_for('static', filename = 'js/jquery.js') }}"></script>
+    <script>
+        function closeOpen(){
+            var targetElement = "." + event.target.id
+            var targetButton = "#" + event.target.id
+            if($(targetElement).css("max-height") == "0px"){
+                // open
+                $(targetElement).css({"max-height":"800px", "padding": "20px"});
+                $(targetButton).css({"transform": "rotate(-180deg"})
+            } else {
+                // close
+                $(targetElement).css({"max-height" : "0px", "padding": "0px"});
+                $(targetButton).css({"transform": "rotate(0deg"})
+            }
+            
+        };
+    </script>
+    <div class="content">
+        <div class="top-block">
+            В клинике работают одни из лучших специалистов в сфере кардиологии и кардиохирургии с опытом работы до 20 лет и более. На каждого пациента выделяется достаточное количество времени для полноценного осмотра, сбора анамнеза, назначения схемы лечения и необходимых манипуляций. Для каждого пациента подбирается оптимальная схема лечения с учетом показаний и сопутствующей патологии. В нашей работе мы руководствуемся научно-обоснованной клинической практикой, принципами доказательной медицины, рекомендациями МОЗ Украины и собственными клиническими протоколами.
+        </div>
+        <div class="sign">
+            <p>КОНСУЛЬТАТИВНАЯ ПОЛИКЛИНИКА</p>
+        </div>
+        <div class="podrazdel first">
+            <div class="podpodrazdel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure omnis modi deserunt officiis, culpa fugiat praesentium sapiente sunt commodi ab? Fugit eaque eos commodi quisquam dolor fugiat, dolores eveniet optio vitae repellat iusto ipsa excepturi est culpa molestias, ducimus iste non quos deleniti inventore aliquam fuga? Deleniti aspernatur aliquam amet non placeat nisi molestiae minus nam. Voluptate fugit animi qui iusto doloribus aspernatur dolore assumenda eum. Magnam quibusdam harum quidem, porro quas ipsum enim quam aperiam ex accusamus sequi, distinctio placeat incidunt, voluptates voluptatem a sit sint iusto odit est nobis quod. Quaerat inventore nostrum in, perferendis tenetur praesentium explicabo.
+            </div>
+        </div>
+        <img id="first" onclick="closeOpen()" class="arrow-down" src="{{ url_for('static', filename = 'pics/arrow-down.png') }}" alt="">
+        <div class="sign">
+            <p>ОТДЕЛЕНИЕ КАРДИОЛОГИИ И КАРДИОХИРУРГИИ</p>
+        </div>
+        <div class="podrazdel second">
+            <div class="podpodrazdel">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit provident, dignissimos pariatur tempore libero quasi officiis aliquam laborum. Labore voluptates quibusdam molestias ad temporibus quas ab corporis repudiandae necessitatibus quos, iure modi inventore officiis expedita animi corrupti qui totam magni natus possimus explicabo autem. Eos, quisquam eaque voluptatum, vel eius ipsum temporibus iusto perspiciatis quidem delectus dicta ullam? Dignissimos, mollitia! Nesciunt cupiditate accusamus, omnis tempora in dolorem doloremque quaerat quisquam quod nam id vel labore nulla recusandae neque nobis reprehenderit sed laborum. Accusamus beatae consequatur quis totam dolore, adipisci fugit esse ipsa mollitia aut debitis sunt optio officiis? Fugit, quos.
+            </div>
+        </div>
+        <img id="second" onclick="closeOpen()" class="arrow-down" src="{{ url_for('static', filename = 'pics/arrow-down.png') }}" alt="">
+        <div class="sign">ОТДЕЛЕНИЕ ХИРУРГИЧЕСКОГО ЛЕЧЕНИЯ НАРУШЕНИЙ РИТМА СЕРДЦА</div>
+        <div class="podrazdel third">
+            <div class="podpodrazdel">
+                
+                <p class="we-help-zagolovok"><b>Мы всегда готовы помочь Вам, если у Вас:</b></p>
+                <div class="we-can-help-block-block">
+                    <p>Фибриляция предсердий (мерцательная аритмия)</p>
+                    <p>Предсердечная тахикардия</p>
+                    <p>Риентри тахикардия атриовентрикулярного узла (РТАВУ)</p>
+                    <p>Желудочковая экстрасистолия</p>
+                    <p>Атриовентрикулярная блокада (АВ блокада)</p>
+                    <p>Вазо-вагальные синкопе</p>
+                </div>
+                <div class="we-can-help-block-block">
+                    <p>Трепетание предсердий</p>
+                    <p>Синдром WPW</p>
+                    <p>Пароксизмальная наджелудочковая</p>
+                    <p>Желудочковая тахикардия</p>
+                    <p>Синдром слабости синусового узла</p>
+                    <p>Полиморфная пароксизмальная желудочковая тахикардия</p>
+                </div>
+                <img src="{{ url_for('static', filename = 'pics/pulse.png') }}" alt="" class="pulse">
+                <p class="we-help-zagolovok"><b>Для диагностики аритмий мы используем:</b></p>
+                <div class="we-can-help-block-block">
+                    <p>Электрокардиография покоя</p>
+                    <p>Чреспищеводная эхокардиография</p>
+                    <p>Электрокардиографический нагрузочный тест</p>
+                    <p>Эндокардиальное электрофизиологическое исследование</p>
+                </div>
+            </div>
+        </div>
+            
+            <img id="third" class="arrow-down" onclick="closeOpen()" src="{{ url_for('static', filename = 'pics/arrow-down.png') }}" alt="">
+            
+        </div>
+       
+        
+        
+        
+    </div>
+
+{% include "_footer.html" %}
+{% endblock %}

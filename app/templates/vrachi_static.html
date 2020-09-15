@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    
+    <div class="content">
+        <div class="vrachi-sign">КОМАНДА ВРАЧЕЙ MEDZDRAVA</div>
+        <div class="vrachi-row">
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач-хирург, кандидат медицинских наук, генеральный директор</div>
+            </a>
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач ультразвуковой диагностики</div>
+            </a>
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач-кардиолог</div>
+            </a>
+        </div>
+        <div class="vrachi-row">
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач-хирург, кандидат медицинских наук, генеральный директор</div>
+            </a>
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач ультразвуковой диагностики</div>
+            </a>
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач-кардиолог</div>
+            </a>
+        </div>
+        <div class="vrachi-row">
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач-хирург, кандидат медицинских наук, генеральный директор</div>
+            </a>
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач ультразвуковой диагностики</div>
+            </a>
+            <a class="vrachi-block" href="{{ url_for('vrach_static') }}">
+                <img src="{{ url_for('static', filename = 'pics/vrach-sample.png') }}" alt="">
+                <div class="vrachi-name">ИВАНОВ ИВАН ИВАНОВИЧ</div>
+                <img src="pics/pulse.png" class="pulse" alt="">
+                <div class="vrachi-title">Врач-кардиолог</div>
+            </a>
+        </div>
+    </div>
+
+{% include "_footer.html" %}
+{% endblock %}

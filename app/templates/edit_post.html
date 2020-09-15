@@ -1,0 +1,28 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+	<form action="" method="post" enctype="multipart/form-data">
+		{{ form.hidden_tag() }}
+		
+		<p>
+            {{ form.title.label }} <br>
+            {{ form.title }} <br>
+            {% for error in form.title.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p class="post_form_text">
+            {{ form.main_text.label }} <br>
+            {{ form.main_text }} <br>
+            {% for error in form.main_text.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+		<p>{{ form.is_in_slider }} {{ form.is_in_slider.label }}</p>
+		<p><a href="{{ url_for('edit_post_image', postid = post.id) }}">Изменить главное изображение</a>{{ form.submit() }}</p>
+
+	</form>
+
+
+{% endblock %}

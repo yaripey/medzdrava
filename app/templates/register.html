@@ -1,0 +1,66 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+    <div class="form-page-background">
+
+        <h1>Регистрация нового пользователя</h1>
+        
+        <form class="register-forma"  method="post">
+            {{ form.hidden_tag() }}
+        <table>
+            <tr>
+                <td>{{ form.role.label }}</td>
+                <td>{{ form.role }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.second_name.label }}</td>
+                <td>{{ form.second_name }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.first_name.label }}</td>
+                <td>{{ form.first_name }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.middle_name.label }}</td>
+                <td>{{ form.middle_name }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.email.label }}</td>
+                <td>{{ form.email }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.sex.label }}</td>
+                <td>{{ form.sex }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.birthdate.label }}</td>
+                <td>{{ form.birthdate }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.address.label }}</td>
+                <td>{{ form.address }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.phonenumber.label }}</td>
+                <td>{{ form.phonenumber }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password2.label }}</td>
+                <td>{{ form.password2 }}</td>
+            </tr>
+        </table>
+        <div class="submit">
+            {{ form.submit }}
+        </div>
+    </form>
+    
+    </div>
+
+
+    {% endblock %}
+<!-- 11 -->

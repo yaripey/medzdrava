@@ -1,0 +1,131 @@
+<!-- Getting general header and footer. -->
+{% extends "base.html" %}
+
+<!-- Main content block -->
+{% block content %}
+
+	<div class="content">
+
+        <table class="main-page">
+            <tr>
+                <td>
+                    <div class="slideshow-container">
+            
+                        {% for post in posts %}
+                            <div class="mySlides fade">
+                                <a href = "{{ url_for('post', postid = post.id) }}" class="slider-image">
+                                    <img src="{{ url_for('get_post_image', filename = post.main_image_path) }}" alt="">
+                                </a>
+                                <div class="text">
+                                    <div class="post-title-in-slider">
+                                        {{ post.title }}
+                                    </div>
+                                    <a class="news-link" href="{{ url_for('news') }}">Другие новости</a>
+                                    <div style="clear: both;"></div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </td>
+                <td>
+                    <div style="clear: both"></div>
+                    <a class="fourbutton" href = "{{ url_for('vrachi_static') }}" style="background-image: url({{ url_for('static', filename = 'pics/1.png') }});">
+                    </a>
+                    <div class="slider-spacer"></div>
+                    <a class="fourbutton" href = "https://www.google.com/maps/place/%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D0%BB.,+22,+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D0%BE%D0%B6%D1%8C%D0%B5,+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D0%BE%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+69000/@47.8311259,35.0418465,17z/data=!3m1!4b1!4m5!3m4!1s0x40dc617330c0e4cd:0x37be405758507ca9!8m2!3d47.8311259!4d35.0440352" style="background-image: url({{ url_for('static', filename = 'pics/2.png') }});">
+                    </a>
+                </td>
+            </tr>
+        </table>
+        
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex-1].style.display = "block";
+            }
+
+            setInterval(function() {plusSlides(1)}, 4000);
+        </script>
+
+        <div class="whymedzdrava">
+            <i>Почему выбирают Medzdrava?</i>
+        </div>
+        <img class="pulse" src="pics/pulse.png" alt="">
+        <div class="reasons">
+            <div class="reasons-block">
+                <div class="block-head">Опыт</div>
+                <div class="block-body">
+                    Все наши врачи, это опытные специалисты, помогшие встать на ноги десяткам пациентов
+                </div>
+            </div>
+            <div class="reasons-block">
+                <div class="block-head">Качество</div>
+                <div class="block-body">
+                    Передовое оборудование, современные медикаменты и внимание к мелочам - это наше кредо
+                </div>
+            </div>
+            <div class="reasons-block">
+                <div class="block-head">Забота</div>
+                <div class="block-body">
+                    Уровень комфорта клиники покажет вам, что лечение может стать поистине приятным процессом
+                </div>
+            </div>
+            <div class="reasons-block">
+                <div class="block-head">Технологии</div>
+                <div class="block-body">
+                    Мы используем последние наработки в сфере лечения сердечных заболеваний
+                </div>
+            </div>
+        </div>
+        <div class="goal-block">
+            <div class="middle-title">Реабилитационный сердечно-сосудистый центр <div class="medzdrava">MEDZDRAVA</div> в Запорожье</div>
+            <div class="goal-body">
+                <p>Наша цель:</p>
+                <i>
+                    Руководствуясь принципами доверия, качества и индивидуального подхода мы оказываем медицинскую помощь используя весь наш опыт и возможности с целью возвращения и поддержания главной человеческой ценности - здоровья.
+                </i>
+            </div>
+        </div>
+        <div class="values-block">
+            <div class="values-all">
+                <div class="values-text">
+                    <div>Ценности, которыми мы руководствуемся:</div>
+                    <ul>
+                        <li>Профессионализм</li>
+                        <li>Опыт</li>
+                        <li>Внимание к клиентам</li>
+                        <li>Безопасность</li>
+                        <li>Ответственность</li>
+                    </ul>
+                </div>
+                <div class="values-img">
+                    <img class="hands" src="pics/hands.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+{% include "_footer.html" %}
+
+{% endblock %}

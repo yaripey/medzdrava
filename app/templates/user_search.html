@@ -1,0 +1,33 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+	<div class="patient-in-search">
+		<form action="" method="post">
+			{{ form.hidden_tag() }}
+			<p>
+				{{ form.search.label }} <br>
+				{{ form.search }} <br>
+				{% for error in form.search.errors %}
+				<span style = "color: red">[{{ error }}]</span>
+				{% endfor %}
+			</p>
+			<p>
+				{{ form.submit }}
+			</p>
+		</form>
+	</div>
+
+	{% if role == 1 %}
+		<a href="{{ url_for('users', role = 1) }}">Показать всех</a>
+	{% elif role == 2 %}
+		<a href="{{ url_for('users', role = 2) }}">Показать всех</a>
+	{% else %}
+		<a href="{{ url_for('users', role = 3) }}">Показать всех</a>
+	{% endif %}
+
+	{% for user in user_list %}
+		{% include '_user.html' %}
+	{% endfor %}	
+
+{% endblock %}

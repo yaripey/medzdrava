@@ -1,0 +1,20 @@
+{% extends 'kabinet_base.html' %}
+
+
+{% block content %}
+    {{ avatars.jcrop_css() }}
+    {{ avatars.crop_box('get_avatar', patient.avatar_file_path) }}
+    {{ avatars.preview_box('get_avatar', patient.avatar_file_path) }}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.x }}
+        {{ form.y }}
+        {{ form.w }}
+        {{ form.h }}
+        <p>
+            {{ form.submit }}
+        </p>
+    </form>
+    {{ avatars.jcrop_js() }}
+    {{ avatars.init_jcrop() }}
+{% endblock %}

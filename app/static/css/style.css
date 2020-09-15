@@ -1,0 +1,1507 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* -webkit-appearance: none; */
+    -webkit-border-radius: 0px;
+    outline: none;
+    resize: none;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: rgb(0, 0, 137);
+}
+
+a:visited {
+    color: rgb(0, 0, 137);
+}
+
+.header{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(0, 0, 137);
+    text-align: center;
+    position: relative;
+}
+
+.logo-test{
+    margin-top: 25px;
+    height: 75px;
+    width: auto;
+    
+    transition: 0.3s ease;
+}
+
+.header-button, .header-logo-test{
+    background-color: none;
+    transition: ease 0.3s;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+    color: white;
+}
+
+.header-button:visited{
+    color: white;
+}
+
+
+.header-logo-test:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease 0.3s;
+}
+
+
+
+.header-button{
+    color: white;
+    line-height: 150px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.header-button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease 0.3s;
+}
+
+
+.logo-text{
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+}
+
+.header-buttons a{
+    display: inline-block;
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 300;
+    transition: ease 0.3s;
+}
+
+.header-buttons a:visited{
+    color: white;
+}
+
+.header-buttons a:hover{
+    background: white;
+    color: black;
+    transition: ease 0.3s;
+}
+
+.header-logo, .header-buttons{
+    display: inline-block;
+}
+
+.header-buttons{
+    margin-left: 100px;
+}
+
+.header-logo{
+    position: absolute;
+}
+
+.logo img{
+    position: relative;
+    top: -10px;
+    width: auto;
+    height: 70px;
+}
+
+.content{
+    max-width: 960px;
+    min-height: 100%;
+    margin: auto;
+    margin-top: 70px;
+    text-align: center;
+}
+body{
+    background-image: url("../pics/main_background.png");
+    background-position: center;
+    background-position-y: -250px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.fourbuttons div{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.fourbuttons img{
+    height: 300px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fourbuttons span{
+    display: inline-block;
+    width: 145px;
+    vertical-align: middle;
+}
+
+.fourbutton{
+    display: block;
+    height: 222px;
+    background-size: 100%;
+    width: 222px;
+    transition: ease 0.3s;
+}
+
+
+
+.fourbuttons a.fourbutton:hover{
+    background-color: rgba(255, 255, 255, 0.347);
+    transition: ease 0.3s;
+}
+
+.fourbuttons{
+    width: 100%;
+    text-align: center;
+}
+
+.whymedzdrava{
+    margin-top: 80px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.reasons{
+    background: rgba(0, 0, 137, 0.03);
+}
+
+.reasons-block{
+    max-width: 190px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.block-head{
+    color: rgb(0, 0, 137);
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 35px;
+}
+
+.block-body{
+    padding-bottom: 40px;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 300;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 30px;
+}
+
+.pulse{
+    width: 175px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+    display: block;
+}
+
+.middle-title{
+    margin: 50px;
+    font-size: 15px;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+.medzdrava{
+    display: inline;
+    font-size: 20px;
+    color: rgb(0, 0, 137);
+}
+
+.goal-block{
+    background-image: url('../pics/background-heart.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.goal-body{
+    margin: auto;
+    max-width: 960px;
+    background-color: rgba(0, 0, 137, 0.85);
+    color: white;
+    padding: 40px;
+    text-align: left;
+}
+
+.goal-body p{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.values-block{
+    background-color: rgba(0, 0, 137, 0.03);
+    padding-left: 20px;
+}
+
+.hands{
+    width: auto;
+    height: 180px;
+    margin-left: 150px;
+    margin-bottom: -4px;
+}
+
+.values-text, .values-img{
+    display: inline-block;
+}
+
+.values-img{
+    vertical-align: bottom;
+}
+
+.values-text{
+    text-align: left;
+}
+
+.values-text ul{
+    margin-bottom: 20px;
+}
+
+.values-text div{
+    color: rgb(0, 0, 137);
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.values-text li{
+    padding: 5px;
+    margin-left: 20px;
+}
+
+
+.values-all{
+    width: 960px;
+    margin: auto;
+    text-align: left;
+}
+
+.footer{
+    height: 50px;
+    width: 100%;
+    background: rgb(0, 0, 137);
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.footer div, .footer ul, .footer a{
+    display: inline-block;
+    height: 50px;
+    vertical-align: top;
+}
+
+.footer div{
+    margin-right: 80px;
+}
+
+.footer a{
+    color: white;
+}
+
+.email{
+    margin-left: 80px;
+}
+
+.footer a img{
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.footer li{
+
+    display: inline-block;
+}
+
+.zag-logo img{
+    width: 150px;
+    height: auto;
+}
+
+.zagolovok{
+    text-align: center;
+    background-color: rgb(0, 0, 137);
+    max-width: 960px;
+    margin: auto;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 70px;
+}
+
+.zag-big, .zag-logo, .zag-small{
+    display: inline-block;
+}
+
+.zag-small i{
+    color: white;
+}
+
+.zag-divider{
+    display: inline-block;
+    width: 300px;
+    height: 1.5px;
+    background-color: red;
+    margin: 10px;
+}
+
+.zag-big{
+    font-size: 30px;
+    font-weight: 500;
+    /* padding: 10px; */
+    line-height: 65px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.zag-logo{
+    vertical-align: bottom;
+}
+
+.zag-small{
+    color: white;
+    font-size: 12px;
+    margin-right: 30px;
+}
+
+.text-under-zag, .under-pulse{
+    max-width: 960px;
+    margin: auto;
+    /* margin-top: 70px; */
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pulse-about{
+    margin: 30px;
+    width: 200px;
+    height: auto;
+}
+
+
+.under-pulse p{
+    margin-bottom: 15px;
+}
+
+.chisla{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    background-color: rgb(0, 0, 137);
+    color: white;
+    max-width: 960px;
+    margin-bottom: 70px;
+}
+
+.chisla-inside, .chisla-divider, .chisla-cifra, .chisla-text{
+    display: inline-block;
+}
+
+.chisla-divider{
+    height: 50px;
+    width: 1px;
+    background: red;
+}
+
+.chisla-inside{
+    margin: 10px;
+}
+
+.chisla-text{
+    max-width: 170px;
+}
+
+.chisla-cifra{
+    font-size: 50px;
+}
+
+.chisla-zag{
+    font-size: 30px;
+}
+
+.top-block{
+    background-color: rgba(0, 0, 137);
+    color: white;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.arrow-down-sign p{
+    display: block;
+}
+
+.arrow-down-sign{
+    margin-top: 45px;
+}
+
+.arrow-down, .arrow-up{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 100px;
+    height: auto;
+    transform: rotate(0deg);
+}
+
+.sign{
+    margin-bottom: 15px;
+}
+
+.contact-block{
+    background-color: rgb(0, 0, 137);
+    color: white;
+    padding: 15px;
+}
+
+.contact-block p{
+    padding: 10px;
+    font-size: 25px;
+}
+
+
+.contact-picture{
+    width: 400px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.contact-list{
+    display: inline-block;
+    text-align: left;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+.contact-list-block{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-icon{
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+}
+
+.contact-divider{
+    display: inline-block;
+    background-color: red;
+    width: 1.5px;
+    height: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    vertical-align: middle;
+}
+
+.contact-data{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.contact-data p{
+    padding: 0;
+    font-size: 15px;
+}
+
+.contact-text{
+    margin-top: 20px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.google-maps{
+    width: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.podrazdel{
+    background: rgba(0, 0, 137);
+    padding: 0px;
+    color: white;
+    text-align: left;
+    transition: ease 0.7s;
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.we-help-zagolovok{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.we-can-help-block-block{
+    font-size: 13px;
+    line-height: 25px;
+    display: inline-block;
+    max-width: 370px;
+    text-align: left;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.arrow-up{
+    display: block;
+    margin: auto;
+}
+
+.vrachi-row{
+
+}
+
+.vrachi-block{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+    margin: 10px;
+}
+
+.vrachi-block img{
+    width: 170px;
+    height: auto;
+}
+
+.vrachi-title{
+    font-size: 10px;
+}
+
+.vrachi-sign{
+    text-decoration: underline;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.vrach-top img{
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    margin-right: 30px;
+    text-align: left;
+}
+
+.vrach-top p, .vrach-top b{
+    text-align: left;
+}
+
+.vrach-right-block{
+    width: 400px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    line-height: 35px;
+}
+
+.vrach-name{
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: ;
+}
+
+.skill-list{
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+.kabinet-content{
+    max-width: 960px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+    background: white;
+    box-shadow: 0px 0px 20px black;
+}
+
+.kabinet-left{
+    width: 198px;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 100%;
+    background: white;
+}
+
+.online-hospital-block{
+    text-align: center;
+    border-bottom: 1px dotted black;
+}
+
+.online-hospital-block img{
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-avatar-small{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: black;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-avatar-big img{
+    width: 160px;
+    height: 160px;
+    border-radius: 160px;
+}
+
+.user-name-small{
+    text-align: center;
+}
+
+.profile-role{
+    text-align: center;
+}
+
+.user-id-small{
+    text-align: center;
+}
+
+.kabinet-right{
+    padding: 10px;
+    width: 738px;
+    min-height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: white;
+    padding-left: 15px;
+    margin-left: -3px;
+    border-left: 1px dotted black;
+}
+
+.medkarta{
+    background: white;
+    height: 40px;
+    /*border-radius: 40px;*/
+    border-bottom: 1px dotted black;
+    line-height: 40px;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+
+.profile-karta{
+    background: white;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.profile-karta-left{
+    width: 200px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.profile-karta-right{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.user-name-big{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.profile-diagnosi{
+    display: inline-block;
+    width: 45%;
+    padding: 10px;
+    vertical-align: top;
+
+}
+
+.profile-diagnosi p, .profile-allergeni p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-diagnosi-title, .profile-allergeni-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.profile-allergeni{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.profile-events-future{    
+    background: white;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.profile-events-past{
+    background: white;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.table-first{
+    width: 200px;
+}
+
+.event-additional{
+    display: none;
+}
+
+.more-button{
+    display: inline-block;
+}
+
+.event-vrach-name div{
+    display: inline-block;
+}
+
+#main_text{
+    width: 500px;
+    height: 500px;
+}
+
+.post{
+    width: 720px;
+    margin: auto;
+}
+
+.main-post-image{
+    width: 720px;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.post p{
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post li{
+    font-size: 20px;
+}
+
+.post h2, .post h1, .post h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.slideshow-container {
+    width: 691px;
+    position: relative;
+    height: 480px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: -307px;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.next {
+    right: -302px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: -302px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: white;  
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    padding: 15px;
+    position: relative;
+    max-width: 100%;
+    text-align: left;
+    top: -54px;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; 
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.slider-image{
+    width: 691px;
+    display: block;
+    height: 480px;
+    overflow: hidden;
+    text-align: center;
+}
+.slider-image img{
+    width: 100%;
+    height: auto;
+}
+
+.patient-in-search{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    background: white;
+    border-radius: 55px;
+}
+
+.avatar-small img{
+    height: 55px;
+    width: 55px;
+    border-radius: 55px;
+}
+
+.avatar-small {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    height: 55px;
+}
+
+.patient-line {
+    width: 65%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.patient-line-right {
+    width: 20%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.patient-line-right a{
+    display: block
+}
+
+.profile-avatar-small img{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons a {
+    font-size: 15px;
+    display: block;
+    padding: 5px;
+    transition: 0.3s ease;
+}
+
+.buttons a:hover {
+    transition: 0.3s ease;
+    background-color: rgba(0, 0, 137, 0.1)
+}
+
+.profile-role {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.user-id-small {
+    margin-bottom: 10px;
+}
+
+.post-in-search{
+    background: white;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.post-preview{
+    background: white;
+    /*padding: 10px;*/
+    border-radius: 50px;
+}
+
+.post-preview img{
+    width: 100%;
+    height: auto;
+}
+
+.kabinet-header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(0, 0, 137);
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.kabinet-header-button{
+    background-color: none;
+    transition: ease 0.3s;
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    vertical-align: top;
+    color: white;
+    line-height: 50px;
+}
+
+.kabinet-header-button:visited{
+    color: white;
+}
+
+.kabinet-header-button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease 0.3s;
+}
+
+.kabinet-header-logo-test{
+    transition: ease 0.3s;
+    display: inline-block;
+    line-height: 50px;
+    width: 150px;
+}
+/*
+.kabinet-header-logo-test:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease 0.3s;
+}*/
+
+
+.kabinet-logo-text{
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: ease 0.3s;
+
+    /*box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2)*/
+}
+
+.kabinet-logo-text:hover{
+    text-shadow: 0px 0px 10px white;
+}
+
+
+.kabinet-logo-test {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    line-height: 50px;
+}
+
+.kabinet-logo-test img{
+    margin-top: 10px;
+    height: 4px;
+    width: auto;
+}
+
+.login-form {
+    margin: auto;
+    text-align: center;
+}
+
+form {
+    font-size: 14px;
+}
+
+.register-form {
+    display: block;
+    width: 100%;
+    margin: auto;
+    /* text-align: center; */
+}
+
+.register-form table {
+    width: 100%;
+}
+
+
+.register-form select {
+    font-size: 14px;
+    padding: 5px;
+    background: white;
+    border: rgb(0, 0, 137) solid 1px;
+}
+
+.register-form p {
+    margin-top: 10px;
+}
+
+.register-form td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    vertical-align: top;
+}
+
+#zacklucheniye {
+    width: 100%;
+    height: 400px;
+}
+
+/* Main input style */
+.register-form input, #eventdate, .login-form input, input#title, form input{
+    background: rgba(0, 0, 137, 0.2);
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    color: black;
+}
+.login-form input:focus {
+    transition: 0.3s ease;
+    background: rgba(0, 0, 137, 0.5);
+    color: white;
+}
+input#title:focus{
+    transition: 0.3s ease;
+    background: rgba(0, 0, 137, 0.5);
+    color: white;
+}
+
+form input:focus {
+    transition: 0.3s ease;
+    background: rgba(0, 0, 137, 0.5);
+    color: white;
+}
+
+
+
+.login-form{
+    width: 500px;
+    margin: auto;
+}
+
+.login-form label{
+    font-size: 18px;
+}
+
+.login-form input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.form-page-background {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.register-form input:focus{
+    transition: 0.3s ease;
+    background: rgba(0, 0, 137, 0.5);
+    color: white;
+}
+
+
+.register-form label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+input#birthdate {
+    display: inline-block;
+    padding: 5px;
+}
+
+
+#submit, .create-post a {
+    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+    transition: 0.2s ease;
+    color: black;
+    border: 1px solid rgb(0, 0, 137);
+    height: 40px;
+    width: auto;
+    font-size: 17px;
+    line-height: 0px;
+}
+
+.create-post{
+    margin-top: 15px;
+    margin-bottom: 28px;
+}
+
+#id_vrach {
+    width: 100%;
+    margin: 0px;
+}
+
+#submit:hover {
+    transition: 0.2s ease;
+    color: white;
+    background: rgb(0, 0, 137);
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 137);
+}
+.create-post a:hover{
+    transition: 0.2s ease;
+    color: white;
+    background: rgb(0, 0, 137);
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 137);
+}
+
+
+#submit:active {
+    background: white;
+    color: rgb(0, 0, 137);
+}
+
+#upload-form {
+    width: 760px;
+    margin: auto;
+    text-align: center; 
+}
+
+input#image, input#main_image {
+    margin: 5px;
+    border-bottom: 1px solid rgb(0, 0, 137);
+    border-radius: 0;
+    line-height: 0;
+    background: white;
+    padding: 5px;
+    width: 300px;
+}
+
+#is_in_slider{
+    width: 15px;
+    height: 15px;
+    display: inline;
+    line-height: 19px;
+}
+
+.preview-box {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 500px;
+}
+
+.kabinet-right a {
+    font-size: 13px;
+}
+
+.profile-events-future table {
+    margin: 10px;
+}
+
+.profile-events-future table td {
+    display: inline-block;
+}
+
+.profile-events-past table {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20spx;
+}
+
+.profile-events-past tr {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.show-more div{
+    cursor: pointer;
+    color: rgb(0, 0, 137);
+    font-size: 13px;
+}
+
+.profile-zagolovok {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(0, 0, 137);
+}
+
+.get-events-form {
+    background: white;
+    border-radius: 40px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.user-search p{
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.user-search input{
+    height: 20px;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 137);
+}
+
+.search-block {
+    padding-left: 20px;
+}
+
+.user-search #submit {
+    margin: 0px;
+    height: 20px;
+}
+
+.arrow-a {
+    display: inline-block;
+    background: white;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 30px;
+    color: black;
+    transition: 0.2s ease;
+}
+
+.arrow-a:hover {
+    transition: 0.2s ease;
+    background: rgba(0, 0, 137);
+    color: white;
+}
+
+.arrows-a {
+    width: 100%;
+    text-align: center;
+}
+
+.kabinet-right .user-in-text {
+    font-size: 17px;
+}
+
+.event {
+    margin-top: 35px;
+}
+
+.main-page {
+    width: 960px;
+    height: 480px;
+}
+
+.main-page td {
+    vertical-align: top;
+}
+
+.slider-spacer {
+    height: 38px;
+}
+
+.login-header {
+    font-weight: 300;
+    text-align: center;
+    margin: 15px;
+}
+
+.prelogin-links {
+    margin: auto;
+    text-align: center;
+}
+
+.prelogin-links a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.prelogin-links a div {
+    font-size: 25px;
+}
+
+.flash {
+    text-align: center;
+    font-size: 17px;
+}
+
+.post-body {
+    width: 760px;
+    margin: auto;
+    min-height: 100%;
+    padding: 20px;
+}
+
+.post-body h1{
+    margin-top: 25px;
+    word-wrap: break-word;
+}
+
+.dotted-divider {
+    height: 1px;
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted black;
+}
+
+.exit {
+    font-size: 20px;
+    color: red;
+}
+
+.exit:visited {
+    color: rgb(204, 51, 0);
+}
+
+.profile-info {
+    margin-bottom: 20px;
+    margin-left: -2px;
+}
+
+.profile-info td{
+    min-width: 150px;
+}
+
+.post-title-in-slider {
+    display: inline;
+    float: left;
+}
+
+.news-link {
+    display: inline;
+    color: white;
+    text-align: right;
+    float: right;
+}
+
+.news-link:visited {
+    color: white;
+}
+
+.news-block {
+    min-height: 100%;
+    width: 960px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+}
+
+.news-post {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.news-image {
+    width: 304px;
+    height: 171px;
+    overflow: hidden;
+    margin-right: 20px;
+    display: inline-block;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.news-image img {
+    width: 304px;
+    height: auto;
+}
+
+.news-content {
+    display: inline;
+    vertical-align: top;
+    float-right;
+    font-size: 20px;
+}
+
+.news-title {
+    font-size: 24px;
+    font-weight: 400;
+}

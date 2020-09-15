@@ -1,0 +1,22 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+    <div class="form-page-background">
+        <a href="{{ url_for('vrach', medzdravaid = vrach.id) }}">Назад</a>
+        <br> <br>
+        {% if events == [] %}
+            <h3>Для выбранной даты нет событий.</h3>
+        {% else %}
+            <h3>События для врача: {{ vrach.second_name }} {{ vrach.first_name }} {{ vrach.middle_name }}</h3>
+            {% for event in events %}
+            <div class="event">
+                {{ event.datetime }} {{ event.event_name }} <br>
+                Пациент: <b><a class="user-in-text" href="{{ url_for('patient', medzdravaid = event.get_patient().id) }}"> {{ event.get_patient().second_name }} {{ event.get_patient().first_name }} {{ event.get_patient().middle_name }}</a></b> <br>
+                <a href="{{ url_for('edit_event', eventid = event.id) }}">Редактировать</a>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+{% endblock %}

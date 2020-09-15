@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1 class="login-header">Вход в систему</h1>
+    <div class="prelogin-links">
+        <a href="{{ url_for('login', var_login = '0') }}">
+            <img src="{{ url_for('static', filename = 'pics/patient_icon.png') }}" alt="">
+            <div class="prelogin-text">Пациент</div>
+        </a>
+        <a href="{{ url_for('login', var_login = '1') }}">
+            <img src="{{ url_for('static', filename = 'pics/vrach_icon.png') }}" alt="">
+            <div class="prelogin-text">Персонал</div>
+        </a>
+    </div>
+
+{% endblock %}

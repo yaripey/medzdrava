@@ -1,0 +1,75 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+<div class="medkarta">ПРОФИЛЬ ВРАЧА</div>
+<div class="profile-karta">
+    <div class="profile-karta-top">
+        <div class="profile-karta-left">
+            <div class="profile-avatar-big">
+                <img src="{{ url_for('get_avatar', filename = vrach.avatar_file_path) }}" alt="">
+            </div>
+            <a href="{{ url_for('upload', medzdravaid = vrach.id) }}">Изменить фото профиля</a>
+        </div>
+        <div class="profile-karta-right">
+            <div class="user-name-big">
+                <b>
+                    {{ vrach.second_name }} {{ vrach.first_name }} {{ vrach.middle_name }}
+                    
+                </b>
+            </div>  
+            {% if current_user.role != 1 %}
+                <div class="edit-profile">
+                    <a href="{{ url_for('edit_profile', medzdravaid = vrach.id) }}">Редактировать профиль</a>
+                </div>
+                {% endif %}
+            <table class="profile-info">
+                <tr>
+                    <td>Пол:</td>
+                    <td>
+                        {% if vrach.sex == 1 %}
+                        женский
+                        {% else %}
+                        мужской
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Дата рождения:</td>
+                    <td>{{ vrach.birthdate }}</td>
+                </tr>
+                <tr>
+                    <td>Medzdrava ID:</td>
+                    <td>{{ vrach.id }}</td>
+                </tr>
+                <tr>
+                    <td>Телефон:</td>
+                    <td>{{ vrach.phonenumber }}</td>
+                </tr>
+                <tr>
+                    <td>Адрес:</td>
+                    <td>{{ vrach.address }}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>{{ vrach.email }}</td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</div>
+<div class="get-events-form">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.eventdate.label }} <br>
+            {{ form.eventdate }} <br>
+            {% for error in form.eventdate.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+{% endblock %}

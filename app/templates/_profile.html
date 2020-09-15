@@ -1,0 +1,57 @@
+<div class="online-hospital-block">
+    <img src="{{ url_for('static', filename='pics/online-hospital.png') }}" alt="">
+</div>
+<div class="profile-avatar-small">
+    <img src="{{ url_for('get_avatar', filename = current_user.avatar_file_path) }}">
+</div>
+
+{% if current_user.role == 1 %}
+<a href="{{ url_for('patient', medzdravaid = current_user.id) }}">
+    <div class="user-name-small">
+        {{ current_user.second_name }} {{ current_user.first_name }}
+    </div>
+</a>
+{% elif current_user.role == 2 %}
+<a href="{{ url_for('vrach', medzdravaid = current_user.id) }}">
+    <div class="user-name-small">
+        {{ current_user.second_name }} {{ current_user.first_name }}
+    </div>
+</a>
+{% elif current_user.role == 3 %}
+<a href="{{ url_for('administrator', medzdravaid = current_user.id) }}">
+    <div class="user-name-small">
+        {{ current_user.second_name }} {{ current_user.first_name }}
+    </div>
+</a>
+{% endif %}
+<div class="profile-role">
+    {% if current_user.role == 1 %}
+    профиль пациента
+    {% elif current_user.role == 2 %}
+    профиль врача
+    {% elif current_user.role == 3 %}
+    профиль администратора
+    {% endif %}
+</div>
+<div class="user-id-small">
+    ID {{ current_user.get_id() }}
+</div>
+
+<div class="buttons">
+    {% if current_user.role == 3 %}
+    <a href="{{ url_for('register') }}">Регистрация</a>
+    {% endif %}
+
+    {% if current_user.role != 1 %}
+    <a href="{{ url_for('users', role = 1) }}">Пациенты</a>
+    <a href="{{ url_for('users', role = 2) }}">Врачи</a>
+    {% endif %}
+
+    {% if current_user.role == 3 %}
+    <a href="{{ url_for('users', role = 3) }}">Администраторы</a>
+    <a href="{{ url_for('posts') }}">Посты</a>
+    {% endif %}
+
+
+    <b><a class="exit" href="{{ url_for('logout') }}">Выход</a></b>
+</div>

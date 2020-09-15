@@ -1,0 +1,168 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+    <div class="medkarta">МЕДИЦИНСКАЯ КАРТА ПАЦИЕНТА</div>
+    <div class="profile-karta">
+        <div class="profile-karta-top">
+            <div class="profile-karta-left">
+                <div class="profile-avatar-big"><img src="{{ url_for('get_avatar', filename = patient.avatar_file_path) }}" alt=""></div>
+                <a href="{{ url_for('upload', medzdravaid = patient.id) }}">Изменить фото профиля</a>
+            </div>
+            <div class="profile-karta-right">
+                <div class="user-name-big">
+                    <b>{{ patient.second_name }} {{ patient.first_name }} {{ patient.middle_name }}</b>
+                </div>
+                {% if current_user.role != 1 %}
+                <div class="edit-profile">
+                    <a href="{{ url_for('edit_profile', medzdravaid = patient.id) }}">Редактировать профиль</a>
+                </div>
+                {% endif %}
+                <table class="profile-info">
+                    <tr>
+                        <td>Пол:</td>
+                        <td>
+                            {% if patient.sex == 1 %}
+                            женский
+                            {% else %}
+                            мужской
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Дата рождения:</td>
+                        <td>{{ patient.birthdate }}</td>
+                    </tr>
+                    <tr>
+                        <td>Medzdrava ID:</td>
+                        <td>{{ patient.id }}</td>
+                    </tr>
+                    <tr>
+                        <td>Телефон:</td>
+                        <td>{{ patient.phonenumber }}</td>
+                    </tr>
+                    <tr>
+                        <td>Адрес:</td>
+                        <td>{{ patient.address }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>{{ patient.email }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="profile-diagnosi">
+            <div class="profile-diagnosi-title">
+                Диагнозы
+            </div>
+            {% if current_user.role != 1 %}
+            <a href="{{ url_for('new_diagnoz', medzdravaid = patient.id) }}" class="addnew">Добавить диагноз</a>
+            {% endif %}
+            {% for diagnoz in diagnozes %}
+                <p>
+                    {{ diagnoz.diagnoz }} 
+                    {% if current_user.role != 1 %}
+                        <a href="{{ url_for('edit_diagnoz', diagnozid = diagnoz.id) }}">Редактировать</a> 
+                        <a href="{{ url_for('delete_diagnoz', diagnozid = diagnoz.id) }}">Удалить</a> 
+                    {% endif %}
+                </p>
+            {% endfor %}
+        </div>
+        <div class="profile-allergeni">
+            <div class="profile-allergeni-title">
+                Аллергены
+            </div>
+            {% if current_user.role != 1 %}
+            <a href="{{ url_for('new_allergen', medzdravaid = patient.id) }}" class="addnew">Добавить аллерген</a>
+            {% endif %}
+            {% for allergen in allergens %}
+                <p>
+                    {{ allergen.allergen }}
+                    {% if current_user.role != 1 %}
+                        <a href="{{ url_for('edit_allergen', allergenid = allergen.id) }}">Редактировать</a> 
+                        <a href="{{ url_for('delete_allergen', allergenid = allergen.id) }}">Удалить</a> 
+                    {% endif %}
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script>
+        function showhide(){
+            var targetElements = "#" + event.target.className + " .event-additional";
+            var targetButton = "." + event.target.className;
+            console.log(targetElements)
+            console.log(targetButton)
+            if($(targetElements).css("display") == "none"){
+                $(targetElements).css("display","block");
+                $(targetButton).html('Скрыть');
+            } else {
+                $(targetElements).css("display","none");
+                $(targetButton).html('Подробнее');
+            };
+        };
+        console.log('privet');
+    </script>
+    
+    <div class="profile-events-future">
+        <p class="profile-zagolovok">Ожидаемые события 
+            {% if current_user.role != 1 %}
+            <a href="{{ url_for('new_event', medzdravaid = patient.id) }}">Новое событие</a>
+            {% endif %}
+        </p>
+        {% for event in future_events %}
+            <table id="{{ event.id }}">
+            <tr>
+                <td class="table-first">{{ event.datetime }}
+                    {% if current_user.role != 1 %}
+                    <a href="{{ url_for('edit_event', eventid = event.id) }}">Редактировать</a>
+                    <a href="{{ url_for('delete_event', medzdravaid = patient.id, eventid = event.id) }}">Удалить</a>
+                    {% endif %}
+                </td>
+                <td class="show-more">{{ event.event_name }}
+                    <div class="{{ event.id }}" onclick="showhide()">Подробнее</div>
+                </td>
+            </tr>
+            <tr class="event-additional">
+                <td class="table-first">Врач:</td>
+                <td>{{ event.get_vrach().second_name }} {{ event.get_vrach().first_name }} {{ event.get_vrach().middle_name }}</td>
+            </tr>
+            <tr class="event-additional">
+                <td class="table-first">Заключение:</td>
+                <td>{{ event.zacklucheniye }}</td>
+            </tr>
+            </table>
+        {% endfor %}
+        
+    </div>
+    <div class="profile-events-past">
+        <p class="profile-zagolovok">История событий</p>
+        {% for event in past_events %}
+            <table id="{{ event.id }}">
+            <tr>
+                <td class="table-first">{{ event.datetime }}
+                    {% if current_user.role != 1 %}
+                    <a href="{{ url_for('edit_event', eventid = event.id) }}">Редактировать</a>
+                    <a href="{{ url_for('delete_event', medzdravaid = patient.id, eventid = event.id) }}">Удалить</a>
+                    {% endif %}
+                </td>
+                <td class="show-more">{{ event.event_name }} <div class="{{ event.id }}" onclick="showhide()">Подробнее</div>
+                </td>
+            </tr>
+            <tr class="event-additional">
+                <td class="table-first">Врач:</td>
+                <td><div class="event-vrach-name">
+                    {{ event.get_vrach().second_name }} {{ event.get_vrach().first_name }} {{ event.get_vrach().middle_name }}</div></td>
+            </tr>
+            <tr class="event-additional">
+                <td class="table-first">Заключение:</td>
+                <td>{{ event.zacklucheniye }}</td>
+            </tr>
+            </table>
+        {% endfor %}
+    </div>
+
+    
+{% endblock %}

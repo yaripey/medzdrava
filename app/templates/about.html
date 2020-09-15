@@ -1,0 +1,54 @@
+<!-- Getting general header and footer -->
+{% extends "base.html" %}
+
+<!-- Main content block -->
+
+{% block content %}
+	<div class="content">
+        <div class="zagolovok">
+            <div class="zag-big">
+                Реабилитационный сердечно-сосудистый центр
+            </div>
+            <div class="zag-logo">
+                <img src="{{ url_for('static', filename = 'pics/logo.png') }}" alt="">
+            </div>
+            <br>
+            <div class="zag-divider"></div>
+            <br>
+            <a href="#" class="zag-small"><i>ЛИЦЕНЗИЯ, СЕРТИФИКАТЫ И ПУБЛИЧНЫЙ ДОГОВОР</i></a>
+            <a href="#" class="zag-small"><i>ПОЛИТИКА В ОБЛАСТИ МЕЖДУНАРОДНОГО СТАНДАРТА КАЧЕСТВА</i></a>
+        </div>
+        <div class="text-under-zag">
+            С 2020го года мы помогаем нашим клиентам забыть что такое такие вещи как гипертония, стенокардия, инфаркт, инсульт и аритмия. Мы поставили себе цель сделать так, чтобы каждый наш клиент прожил на несколько лет дольше, чем до того как он зашёл в наши стены.
+        </div>
+        <img src=" {{ url_for('static', filename = 'pics/pulse.png') }}" alt="" class="pulse-about">
+        <div class="under-pulse">
+            <p>
+                Эффективное лечение зависит от правильной постановки диагноза настолько быстро, насколько это возможно. Наши специалисты сотрудничают в разных дисциплинах, чтобы выслушать вашу историю, оценить ваше состояние со всех сторон и разработать план диагностики и лечения, который подходит именно вам.
+            </p>
+            <p>
+                Независимо от того, с какой серьёзной, сложной или редкой проблемой вы сталкиваетесь, вы можете быть уверены, что мы имеем большой опыт лечения паиентов с вашим конкретным диагнозом.
+            </p> 
+        </div>
+        <div class="chisla">
+            <div class="chisla-zag">
+                МЫ В ЧИСЛАХ
+            </div>
+            <div class="chisla-inside">
+                <div class="chisla-cifra">3</div>
+                <div class="chisla-text">ДОКТОРА МЕДИЦИНСКИХ НАУК</div>
+            </div>
+            <div class="chisla-divider"></div>
+            <div class="chisla-inside">
+                <div class="chisla-cifra">20</div>
+                <div class="chisla-text">ВРАЧЕЙ ВЫСШЕЙ КАТЕГОРИИ</div>
+            </div>
+            <div class="chisla-divider"></div>
+            <div class="chisla-inside">
+                <div class="chisla-cifra">>50</div>
+                <div class="chisla-text">ЛЕТ ПРАКТИКИ</div>
+            </div>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+{% endblock %}

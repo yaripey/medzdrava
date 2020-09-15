@@ -1,0 +1,59 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+<form method="post">
+	{{ form.hidden_tag() }}
+	<p>
+        {{ form.second_name.label }} <br>
+        {{ form.second_name }} <br>
+        {% for error in form.second_name.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.first_name.label }} <br>
+        {{ form.first_name }} <br>
+        {% for error in form.first_name.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.middle_name.label }} <br>
+        {{ form.middle_name }} <br>
+        {% for error in form.middle_name.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.birthdate.label }} <br>
+        {{ form.birthdate }} <br>
+        {% for error in form.birthdate.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.phonenumber.label }} <br>
+        {{ form.phonenumber }} <br>
+        {% for error in form.phonenumber.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.address.label }} <br>
+        {{ form.address }} <br>
+        {% for error in form.address.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.email.label }} <br>
+        {{ form.email }} <br>
+        {% for error in form.email.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.submit }}</p>
+</form>
+
+{% endblock %}

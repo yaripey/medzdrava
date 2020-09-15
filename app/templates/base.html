@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- Header start -->
+	<div class="header">
+        <a href="{{ url_for('about') }}" class="header-button">О нас</a>
+        <a href="{{ url_for('services') }}" class="header-button">Услуги</a>
+        <a href="{{ url_for('index') }}" class="header-logo-test">
+            <img class="logo-test" src="{{ url_for('static', filename = 'pics/logo_test.png') }}" alt="">
+            <div class="logo-text">MEDZDRAVA</div>
+        </a>
+        <a href="{{ url_for('contacts') }}" class="header-button">Контакты</a>
+        <a href="{{ url_for('kabinet') }}" class="header-button">Мой кабинет</a>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </div>
+	<!-- Header end -->
+
+	<!-- Main block start -->
+	{% block content %}{% endblock %}
+	<!-- Main block end -->
+
+</body>
+</html>

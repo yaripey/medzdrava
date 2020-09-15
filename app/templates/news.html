@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="news-block">
+	{% for post in posts %}
+
+		<p class="news-post">
+			<a class="news-title" href="{{ url_for('post', postid = post.id) }}" class="news-post-title">
+				{{ post.title }}
+			</a>
+			<div class="news-post-body">
+				<div class="news-image">
+					<img src="{{ url_for('get_post_image', filename = post.main_image_path) }}" alt="">
+				</div>
+				<div class="news-content">{{ post.content }} <br>
+					<a href="{{ url_for('post', postid = post.id )}}">Подробнее...</a>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</p>
+
+	{% endfor %}
+</div>
+
+{% include "_footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends base %}
+
+{% block content %}
+
+<div>Кто вы?</div>
+<a href="{{ url_for('login', role='patient') }}">Пациент</a>
+<a href="{{ url_for('login', role='vrach') }}">Врач</a>
+<a href="{{ url_for('login', role='admin') }}">Администратор</a>
+
+{% endblock %}

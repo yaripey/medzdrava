@@ -1,0 +1,49 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+<div class="form-page-background">
+
+    <h1>Создание нового события</h1>
+    <form class="register-form" action="" method="post">
+        {{ form.hidden_tag() }}
+        <table>
+            <tr>
+                <td>{{ form.event_name.label }}</td>
+                <td>{{ form.event_name }}
+                    {% for error in form.event_name.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td>{{ form.id_vrach.label }}</td>
+                <td>{{ form.id_vrach }}
+                    {% for error in form.id_vrach.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td>{{ form.datetime.label }}</td>
+                <td>{{ form.datetime }}
+                    {% for error in form.datetime.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td>{{ form.zacklucheniye.label }}</td>
+                <td>{{ form.zacklucheniye }}
+                    {% for error in form.zacklucheniye.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+        {{ form.submit() }}
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.diagnoz.label }} <br>
+            {{ form.diagnoz(size=64) }} <br>
+            {% for error in form.diagnoz.errors %}
+            <span style = 'color: red;'>[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+{% endblock %}

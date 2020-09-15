@@ -1,0 +1,60 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+    <div class="medkarta">ПРОФИЛЬ АДМИНИСТРАТОРА</div>
+    <div class="profile-karta">
+        <div class="profile-karta-top">
+            <div class="profile-karta-left">
+                <div class="profile-avatar-big">
+                    <img src="{{ url_for('get_avatar', filename = administrator.avatar_file_path) }}" alt="">
+                    <a href="{{ url_for('upload', medzdravaid = administrator.id) }}">Изменить фото профиля</a>
+                </div>
+            </div>
+            <div class="profile-karta-right">
+                <div class="user-name-big"><b>
+                    {{ administrator.second_name }}
+                    {{ administrator.first_name }}
+                    {{ administrator.middle_name }}</b>
+                </div>
+                {% if current_user.role == 3 %}
+                <div class="edit-profile">
+                    <a href="{{ url_for('edit_profile', medzdravaid = administrator.id) }}">Редактировать профиль</a>
+                </div>
+                {% endif %}
+                <table class="profile-info">
+                    <tr>
+                        <td>Пол:</td>
+                        <td>
+                            {% if administrator.sex == 1 %}
+                            женский
+                            {% else %}
+                            мужской
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Дата рождения:</td>
+                        <td>{{ administrator.birthdate }}</td>
+                    </tr>
+                    <tr>
+                        <td>Medzdrava ID:</td>
+                        <td>{{ administrator.id }}</td>
+                    </tr>
+                    <tr>
+                        <td>Телефон:</td>
+                        <td>{{ administrator.phonenumber }}</td>
+                    </tr>
+                    <tr>
+                        <td>Адрес:</td>
+                        <td>{{ administrator.address }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>{{ administrator.email }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<div class="patient-in-search">
+	<div class="avatar-small">
+		<img src="{{ url_for('get_avatar', filename = user.avatar_file_path) }}" alt="">
+	</div>
+	<div class="patient-line">
+		<div class="top-line">
+			<a href="{{ url_for('administrator', medzdravaid = user.id) }}">	
+			{{ user.second_name }} {{ user.first_name }} {{ user.middle_name }}
+			</a>
+		</div>
+		<div class="bottom-line">
+			{% if user.sex == 1 %}
+			Ж., 
+			{% else %}
+			М., 
+			{% endif %}
+			{{ user.birthdate }}, 
+			ID {{ user.get_id() }} 
+		</div>
+	</div>
+	<div class="patient-line-right">
+		<a href="{{ url_for('delete_user', medzdravaid = user.id, role = 3) }}" class="delete-patient">Удалить</a>
+		<a href="{{ url_for('edit_profile', medzdravaid = user.id) }}" class="edit_user">Редактировать</a>
+	</div>
+</div>

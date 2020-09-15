@@ -1,0 +1,11 @@
+{% extends "kabinet_base.html" %}
+
+{% block content %}
+
+	{% for administrator in administrator_list %}
+	<a href="{{ url_for('administrator', medzdravaid = administrator.id) }}">
+		{{ administrator.second_name }} {{ administrator.first_name }} {{ administrator.middle_name }}
+	</a> <br>
+	{% endfor %}
+
+{% endblock %}

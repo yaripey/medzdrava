@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
+	<div class="post-body">
+		<h1>{{ post.title }}</h1>
+
+		<img class="main-post-image" src="{{ url_for('get_post_image', filename = post.main_image_path) }}" alt="">
+
+		<p>{{ post.content|markdown }}</p>
+
+
+		<div class="dotted-divider"></div>
+		<p>{{ post.datetime }}</p>
+
+		{% if current_user.role == 3 %}
+			<div class="dotted-divider"></div>
+			<a href="{{ url_for('edit_post', postid = post.id) }}">Редактировать пост</a>
+			<a href="{{ url_for('delete_post', postid = post.id) }}">Удалить пост</a>
+		{% endif %}
+	</div>
+
+{% include "_footer.html" %}
+
+{% endblock %}

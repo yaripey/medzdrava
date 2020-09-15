@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1 class="login-header">Вход в систему</h1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flash">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    <form class="login-form" action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.medzdravaid.label }} <br>
+            {{ form.medzdravaid(size=64) }} <br>
+            {% for error in form.medzdravaid.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.phonenumber.label }} <br>
+            {{ form.phonenumber(size=64) }} <br>
+            {% for error in form.phonenumber.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        {% if var_login == "1" %}
+        <p>
+            {{ form.password.label }} <br>
+            {{ form.password(size=64) }} <br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        {% endif %}
+        <p class="submit-button">{{ form.submit() }}</p>
+    </form>
+
+{% endblock %}
